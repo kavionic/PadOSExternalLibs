@@ -1,0 +1,30 @@
+[submodule "zlib"]
+	path = zlib
+	url = https://github.com/madler/zlib.git
+[submodule "libpng"]
+	path = libpng
+	url = https://github.com/glennrp/libpng.git
+[submodule "eigen"]
+	path = eigen
+	url = https://gitlab.com/libeigen/eigen.git
+[submodule "json"]
+	path = json
+	url = https://github.com/nlohmann/json.git
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/kavionic/googletest.git
+[submodule "cmsis-core"]
+	path = cmsis-core
+	url = https://github.com/STMicroelectronics/cmsis-core.git
+[submodule "cmsis-device-h7"]
+	path = cmsis-device-h7
+	url = https://github.com/STMicroelectronics/cmsis-device-h7.git
+[submodule "fmt"]
+	path = fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "pugixml"]
+	path = pugixml
+	url = https://github.com/zeux/pugixml.git
+[submodule "muparser"]
+	path = muparser
+	url = https://github.com/beltoforion/muparser.git
