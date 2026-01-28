@@ -16,6 +16,9 @@ include_directories(
 	${CMAKE_BINARY_DIR}/libpng
 )
 
+set(ARGPARSE_INSTALL ON)
+
+
 set(FMT_INSTALL ON)
 set(EIGEN_BUILD_CMAKE_PACKAGE ON)
 set(JSON_Install ON)
@@ -57,6 +60,7 @@ set(BUILD_TESTING OFF)
 # fmt Build options
 add_compile_definitions(FMT_OPTIMIZE_SIZE=2)
 
+add_subdirectory(argparse)
 add_subdirectory(pugixml)
 add_subdirectory(zlib)
 add_subdirectory(libpng)
@@ -69,6 +73,7 @@ add_subdirectory(muparser)
 add_dependencies(png_static zlibstatic)
 
 install(TARGETS
+	argparse
 	fmt
 	pugixml
 	png_static

@@ -28,3 +28,12 @@
 [submodule "muparser"]
 	path = muparser
 	url = https://github.com/beltoforion/muparser.git
+[submodule "libedit"]
+	path = libedit
+	url = https://github.com/cdesjardins/libedit.git
+[submodule "ncurses"]
+	path = ncurses
+	url = https://github.com/mirror/ncurses.git
+[submodule "argparse"]
+	path = argparse
+	url = https://github.com/p-ranav/argparse.git
