@@ -68,6 +68,18 @@ add_subdirectory(eigen)
 add_subdirectory(fmt)
 add_subdirectory(json)
 add_subdirectory(googletest)
+
+add_library(gtest_kernel STATIC
+	googletest/googletest/src/gtest-all.cc
+)
+target_include_directories(gtest_kernel PUBLIC
+	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/googletest/googletest/include>
+	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/googletest/googletest>
+	$<INSTALL_INTERFACE:include>
+)
+target_compile_features(gtest_kernel PUBLIC cxx_std_23)
+target_compile_definitions(gtest_kernel PUBLIC GTEST_HAS_FILE_SYSTEM=0)
+
 add_subdirectory(muparser)
 
 add_dependencies(png_static zlibstatic)
@@ -78,6 +90,7 @@ install(TARGETS
 	pugixml
 	png_static
 	gtest
+	gtest_kernel
 	zlibstatic
 	muparser
     ARCHIVE DESTINATION lib
