@@ -81,6 +81,7 @@ target_compile_features(gtest_kernel PUBLIC cxx_std_23)
 target_compile_definitions(gtest_kernel PUBLIC GTEST_HAS_FILE_SYSTEM=0)
 
 add_subdirectory(muparser)
+add_subdirectory(cmake/libxkbcommon)
 
 add_dependencies(png_static zlibstatic)
 

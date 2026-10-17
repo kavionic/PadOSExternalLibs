@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+
+if(NOT TARGET xkbcommon::xkbcommon)
+    set_and_check(XKBCOMMON_LIBRARY "${PACKAGE_PREFIX_DIR}/lib/libxkbcommon.a")
+    set_and_check(XKBCOMMON_INCLUDE_DIR "${PACKAGE_PREFIX_DIR}/include")
+    add_library(xkbcommon::xkbcommon STATIC IMPORTED)
+    set_target_properties(xkbcommon::xkbcommon PROPERTIES
+        IMPORTED_LOCATION "${XKBCOMMON_LIBRARY}"
+        INTERFACE_INCLUDE_DIRECTORIES "${XKBCOMMON_INCLUDE_DIR}"
+        IMPORTED_LINK_INTERFACE_LANGUAGES C
+    )
+endif()
+
+check_required_components(xkbcommon)

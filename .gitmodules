@@ -37,3 +37,6 @@
 [submodule "argparse"]
 	path = argparse
 	url = https://github.com/p-ranav/argparse.git
+[submodule "libxkbcommon"]
+	path = libxkbcommon
+	url = https://github.com/xkbcommon/libxkbcommon.git

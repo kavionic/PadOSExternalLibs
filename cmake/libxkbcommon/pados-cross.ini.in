@@ -1,0 +1,18 @@
+[binaries]
+c = @XKBCOMMON_MESON_CC@
+ar = @XKBCOMMON_MESON_AR@
+strip = @XKBCOMMON_MESON_STRIP@
+bison = @XKBCOMMON_MESON_BISON@
+
+[host_machine]
+system = 'pados'
+cpu_family = 'arm'
+cpu = 'arm'
+endian = 'little'
+
+[properties]
+needs_exe_wrapper = true
+
+[built-in options]
+c_args = @XKBCOMMON_MESON_C_ARGS@
+c_link_args = @XKBCOMMON_MESON_LINK_ARGS@
